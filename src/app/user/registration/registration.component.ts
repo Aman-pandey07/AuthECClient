@@ -4,11 +4,12 @@ import { AbstractControl, FormBuilder, ReactiveFormsModule, ValidationErrors, Va
 import { FirstkeyPipe } from '../../shared/pipes/firstkey.pipe';
 import { AuthService } from '../../shared/services/auth.service';
 import { ToastrService } from 'ngx-toastr';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, FirstkeyPipe],
+  imports: [ReactiveFormsModule, CommonModule, FirstkeyPipe,RouterLink],
   templateUrl: './registration.component.html',
   styles: ``
 })

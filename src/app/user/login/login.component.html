@@ -1,0 +1,53 @@
+<!-- //Header text -->
+<div class="mt-4">
+    <h2 class="text-success">
+        Sign In
+    </h2>  
+</div>
+
+<div>
+    Don't have an Account?
+    <a routerLink = "/signup" class="text-decoration-none fw-medium text-success d-inline-block">
+        Sign Up
+    </a>
+ </div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+     <!-- Email -->
+  <div class="mb-3">
+    <input 
+      class="form-control bg-body-secondary" 
+      placeholder="Email" 
+      formControlName="email">
+  </div>
+  <div class="error-feedback" *ngIf="hasDisplayableError('email') && form.controls.email.hasError('required')">
+    Please Enter Your email address
+  </div>
+  <div class="error-feedback" *ngIf="hasDisplayableError('email') && form.controls.email.hasError('email')">
+    Please enter a valid email address
+  </div>
+
+  <!-- Password -->
+  <div class="mb-3">
+    <input 
+      class="form-control bg-body-secondary" 
+      placeholder="Password" 
+      type="password"
+      formControlName="password">
+  </div>
+  <div class="error-feedback" *ngIf="hasDisplayableError('password') && form.controls.password.hasError('required')">
+    Please Enter Your password
+  </div>
+
+
+    <!-- //Submit Button -->
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success w-100 round-3">
+            Login
+        </button>
+    </div>
+
+    
+
+</form>

@@ -1,6 +1,20 @@
-<div class="mt-4 h2 text-success">
-    Sign up
+<!-- //Header text -->
+<div class="mt-4">
+    <h2 class="text-success">
+        Sign up
+    </h2>  
 </div>
+
+<!-- Hyper link to switch between login and signup -->
+ <div>
+    Already have an Account?
+    <a routerLink = "/signin" class="text-decoration-none fw-medium text-success d-inline-block">
+        Sign In
+    </a>
+ </div>
+ 
+
+
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
     <div class="mb-3">
